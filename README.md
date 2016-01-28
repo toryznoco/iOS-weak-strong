@@ -3,7 +3,7 @@
 
 首先有一点，在OC中，如果对象没有强引用，就会被自动释放，那么为什么控件还可以设为weak?
 
-1. 从storyboard或者xib上创建控件，在控件放在view上的时候，已经形成了如下的引用关系,以UIButton为例：
+1.从storyboard或者xib上创建控件，在控件放在view上的时候，已经形成了如下的引用关系,以UIButton为例：
 
 UIViewController->UIView->subView->UIButton然后你为这个UIButton声明一个weak属性
 
@@ -12,7 +12,7 @@ UIViewController->UIView->subView->UIButton然后你为这个UIButton声明一�
 ```
 相当于xib/sb对这个Button是强引用，你生命的属性对它是弱引用。
 
-2. 手动创建控件
+2.手动创建控件
 
 a). 将控件声明成strong
 
