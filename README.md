@@ -25,7 +25,8 @@ _btn = button;
 最近看的黑马iOS视频上给的建议的是：
 1.如果用Stroyboard拖线，用weak
 2.如果自定对象，用strong(但我还是习惯用weak暂时=_=)
- ![image](https://github.com/Toryznoco/iOS-weak-strong/blob/master/images-folder/vim-relationship.png)
+ ![image](https://github.com/toryznoco/iOS-weak-strong/blob/master/images-folder/relationship.png)
+
 
 其实不管声明的属性是强引用还是弱引用，在控制器消失的时候，这个属性消失，View消失，subViews消失，控件也就消失了。
 
