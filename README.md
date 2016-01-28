@@ -68,6 +68,7 @@ From a practical perspective, in iOS and OS X outlets should be defined as decla
 简单的说，如果IBOutlet对象是nib/sb scene的拥有者（File'sowner）所持有的对象，那么很显然拥有者必须“拥有”对象的指针，因此属性应设置为strong。而其他的IBOutlet对象的属性需要设置为weak，因为拥有者并不需要“拥有”他们的指针。举例来说，UIViewController的view属性是strong，因为controller要直接拥有view。而添加到view上的subviews，作为IBOutlet只需要设置为weak就可以了，因为他们不是controller直接拥有的。直接拥有subviews的是controller的view，ARC会帮助管理内存。
 
 紧接着，文档里又提到：
+
 Outlets should be changed to strong when the outlet should be considered to own the referenced object:
 
 ·As indicated previously, this is often the case with File’s Owner—top level objects in a nib file are frequently considered to be owned by the File’s Owner.
